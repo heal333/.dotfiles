@@ -1,0 +1,3 @@
+#!/bin/bash
+cpupower frequency-set -u 2500MHz
+echo 2500Hz
