@@ -1,0 +1,5 @@
+preload = ~/.config/hypr/preloadedWallpaper/wallpaper
+
+wallpaper = eDP-1,~/.config/hypr/preloadedWallpaper/wallpaper
+splash=false
+ipc = off
