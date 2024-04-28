@@ -12,7 +12,8 @@ else
   pkill hyprpaper  
   rm ~/.config/hypr/preloadedWallpaper/*
   cp $1 ~/.config/hypr/preloadedWallpaper/wallpaper
-  hyprpaper &
+  hyprpaper & disown
+  echo done
 fi
 
 echo "done!"
