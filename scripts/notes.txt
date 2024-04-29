@@ -1,0 +1,56 @@
+[CS]
+backpressure: readable stream is faster than sending the result with response writable stream over the network
+
+
+[CONFIG]
+currentMax = 5620000
+
+
+[MATH]
+3median = mode +2mean
+mode can be multivalued  & cant be 1
+need mean for standard deviation. 
+standard deviation = root of average of squered differance between mean and element
+variance = standard deviations**2
+for 9n squered: jitne 9 unse 1 kam 9, jitne 9 unse 1 kam 0, bich me 81 laga dena mere hero
+for 9n cubed: jitne 9 unse 1 kam 9, jitne 9 unse 1 kam 0, bich me 72 laga dena mere hero, end with jitne 9.
+square of 9 1s (111111111) = 12345678987654321
+dividend = (divisior*quotient) + remainder
+
+divisibility rules:
+  4: last 2 digit should be divilible by 4 or should be 00
+  7:
+  8:last 3 digits should be dibisible by 8 or should be 000
+  9:the sum of all the digits of the number should be divisible by 9
+  11:the difference of the odd sum and even sum of the digits of a number is divisible by 11
+
+interior angles sum = (n-2)*180
+interior angles(regular figure) = interior angles sum / n
+
+area of equilataral triangle = (root(3)/4)*a**2
+
+inradius = area/semi perimeter
+circumradious = product of sides/(4*area)
+
+for right angle triangle:
+  inradius = (base+perpendicular-hypoteneaus)/2
+  circumradious = hypoteneaus/2
+  
+for equilataral triangle:
+  inradius = a/(2*root(3))
+  inradius = height/3
+  circumradious = a/root(3)
+
+equilataral relations
+
+0.13636363636..... = (136-1)/990
+
+avg speed for the same distance 3/(1/s1 + 1/s2 + 1/s3)
+
+first n odd numbers avg = number
+first n even numbers avg = n+1
+first n natural numbers avg = (n+1)/2
+
+
+
+

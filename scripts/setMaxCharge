@@ -1,3 +1,12 @@
 #!/bin/bash
-echo 70 > /sys/class/power_supply/BAT0/charge_control_end_threshold
-echo changed
+
+
+if [ $# -lt 1 ]
+then
+  echo 70 > /sys/class/power_supply/BAT0/charge_control_end_threshold
+  echo changed to 70
+  exit 1
+else
+  echo $1 > /sys/class/power_supply/BAT0/charge_control_end_threshold
+  echo changed to $1
+fi 

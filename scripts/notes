@@ -1,4 +1,3 @@
 #!/bin/bash
 
-nvim ~/scripts/notes.txt
-
+cat ~/scripts/notes.txt
