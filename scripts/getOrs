@@ -1,0 +1,3 @@
+#!/bin/bash
+cpupower frequency-set -u 4000MHz
+echo 4000Hz

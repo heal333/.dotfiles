@@ -1,9 +1,71 @@
 [CS]
 backpressure: readable stream is faster than sending the result with response writable stream over the network
+wraper function in nodejs: functioin(exports,require,module,__filename,__dirname){}
+
+unary(1) binary(2) decimal(10) bi(nary digi)t 
+4 2 1|
+1 0 0:4
+0 1 0:2
+
+Constructor in is a special method that is invoked automatically at the time an object of a class is created. It is used to initialize the data members of new objects generally.
+super can be used to refer immediate parent class instance variable.
+super can be used to invoke immediate parent class method.
+super() can be used to invoke immediate parent class constructor.
+
+CDN = content delivery network
+
+react-dom(createRoot, createPortal) is for modifying the dom
+react elements are just objects. Becomes html elements when we render it
+order matters for multiple script tags
+reactelement.render() will replace everything in the reactelement
+react can work in specific part of an webpage
+npm is NOT node package manager
+bundler: vite, parcel, webpack(create-react-app uses this)
+devDependency used in development phase only and not in production build
+in package.json:
+  ^(caret)  = Compatible with version, willl update to all future minor/patch verisons that are
+              backwards-compatible without incrementing the mazor verison.
+  ~(tilde)  = Approximately equivalent to version, will update future patch that area
+              backwards-compatible without incrementing the minor version.
+transitive dependency: indirect dependency.
+every dependency has its own package.json btw.
+HMR: Hot Module Replacement
+tree shaking in percel
+npx: executing an npm package
+JSX: HTML-like syntax in js, bundler will transpile this code. (eg: the bable inside percel)
+JSX => React.createElement => JS Object => HTML element(root.render)
+JSX prevents cross site scripting(XSS) attacks btw
+you can just execute a react component cause its just an function
+config driven UI
+list of elements needs a key property to identify it uniquely and add new element in that list for optimized rendering. So it dosent need to rerender every element in the list when a new element is added.
+not reccomended to use index as a key otherwise it could cause order issue
+default export and named export
+hooks are javascript function provided by the react library
+dom(document object model):tree like structure of the html elements
+virtual-dom: representation of an actual dom.
+optional chaining in js.
+useState creates a local state variable in our functional component
+useEffect without a dependency array is called after every render
+if we return a function in useEffect that function is called when that componenent is unmounted;
+Link behind the scenes is an anchor tag
+life cycle of class componenent in React: 
+1. Constructor (render phase)
+2. render (render phase)
+3. componentDidMount (commit phase) //this will execute after all child and all sibling component life cycle is done too cause optimization
+4.componentDidUpdata //after every subsequent update
+5.componentWillUnmount //just before unmounting
+
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram
+
+Lazy Loading/On demand loading/ dynamic import:
+const ComponentWithLazyLoading = lazy(()=> import("path to the component"))
+<Suspense fallback={temporary component}><ComponentWithLazyLoading /></Suspense>
+
+higher order component: takes an component and returns an component
 
 
 [CONFIG]
-currentMax = 5620000
+currentMax = 5620000,556800,558300
 
 
 [MATH]
