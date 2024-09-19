@@ -7,6 +7,10 @@ unary(1) binary(2) decimal(10) bi(nary digi)t
 1 0 0:4
 0 1 0:2
 
+High level language -- (Machine code -- Assembly code)* -- Binary code.
+                        * low level language
+
+
 Constructor in is a special method that is invoked automatically at the time an object of a class is created. It is used to initialize the data members of new objects generally.
 super can be used to refer immediate parent class instance variable.
 super can be used to invoke immediate parent class method.
@@ -64,8 +68,25 @@ const ComponentWithLazyLoading = lazy(()=> import("path to the component"))
 higher order component: takes an component and returns an component
 
 
+
+//node.js
+node.js Tyan Dahl, 2009 , initially known as web.js
+node.js: cross platform, open-source, javascript runtime environment with event driven architecture and asynchronous I/O
+
+ECMAScript is a standard for scripting language including js
+js engine follows ECMAScript standard
+
+global object in node.js is global (provided by environment)
+  this refers to {} in node.js
+
+global object in browser js is window. 
+  this,self,window,frames refers to window object in browser
+
+globalThis is the standard for all js runtime environment to refer to the global object
+
+
 [CONFIG]
-currentMax = 5620000,556800,558300
+currentMax = 5620000,5568000,5583000,5578000
 
 
 [MATH]
