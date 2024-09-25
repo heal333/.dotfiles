@@ -75,7 +75,11 @@ Anonymous function:
   Function where there is no need to define name for the function, it just can be assigned to variable
 Named function: 
   Normal function with its name assigned to a variable !!In this case you cannot call function by its name in outer scope!! (Scope Chain)
+
 Firstclass function: Ability to use functions as values.
+
+
+
 
 
 //React
@@ -134,22 +138,6 @@ redux:
     store a object to store states.
 reducer function still returns a new immutable state but does this behind the scene(using immerjs)
 
-<ScrollWheelRight>Function statement / Function Declaration : the function is normally defined and can be used later on␍
-Function expression : the function is first created and assigned to a variable so that it can be called by its variable name and unless it is defined, it cannot be executed otherwise it throws out "Uncaught TypeError"␍
-␍
-Anonymous function : function where there is no need to define name for the function, it just can be assigned to variable␍
-␍
-Named function : Normal function with its name assigned to a variable !!In this case you cannot call function by its name in outer scope!! (Scope Chain)Function statement / Function Declaration : the function is normally defined and can be used later on␍
-Function expression : the function is first created and assigned to a variable so that it can be called by its variable name and unless it is defined, it cannot be executed otherwise it throws out "Uncaught TypeError"␍
-␍
-Anonymous function : function where there is no need to define name for the function, it just can be assigned to variable␍
-␍
-Named function : Normal function with its name assigned to a variable !!In this case you cannot call function by its name in outer scope!! (Scope Chain)Function statement / Function Declaration : the function is normally defined and can be used later on
-Function expression : the function is first created and assigned to a variable so that it can be called by its variable name and unless it is defined, it cannot be executed otherwise it throws out "Uncaught TypeError"
-
-Anonymous function : function where there is no need to define name for the function, it just can be assigned to variable
-
-Named function : Normal function with its name assigned to a variable !!In this case you cannot call function by its name in outer scope!! (Scope Chain)
 
 
 //node.js
