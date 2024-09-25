@@ -18,6 +18,67 @@ super() can be used to invoke immediate parent class constructor.
 
 CDN = content delivery network
 
+//javascript(synchronous, single-threaded,loosely typed )
+execution context:
+        An environment created by javascript engine to handle the transformation and execution of js code
+      1.variable environment:variables and functions as key value pairs (memory allocation phase)
+      2.thread of execution:(code execution phase)
+on a function invokation a new execution context is created
+
+Hoisting:
+  Mechanism in JS where the variable declarations are moved to the top of the scope before execution.
+  Therefore it is possible to call a function before initializing it. This happnes because execution context happnes in two phases.
+  in the first phase variables will get initialized to undefined.
+
+Whenever an execution context is created, a lexical environment is created. Lexical environment is the local memory along with the lexical environment of its parent.
+Lexical as a term means in hierarchy or in sequence.
+scope chain: chain of all lexical environment of parent environment
+
+at the global level "this" points to the global object( window object in case of browsers).␍
+anything that is not inside a function is the "global space".␍
+whenever we create any variables or functions in the "global space", they get attached to the global object( window object in case of browsers).
+
+a call stack is used to keep track of all execution context
+only for a proper function delclaration the function defination is stored in the variable environment.
+for a arrow function undefined is stored in the variable environment.(like a var variable)
+at global context this refers to the window object.
+scope: where i can access certain variable
+let and const are hoisted on different memory space from global(for var)
+
+Undefined: can be considered an Special Placeholder that gets assigned in the memory allocation phase to variable before any value is assigned to that variable
+not defined: variable is not found in the scope chain
+
+
+tdz:
+  the zone between hoisting and declaration for let and const variables.
+  accessing let and const before it is declared.
+  ReferenceError: Cannot access 'm' before initialization
+
+  syntax error ... violation of JS syntax
+  type error ...  while trying to re-initialize const variable
+  reference error ... while trying to access variable which is not there in global memory.
+
+block also known as compound statements is used to combine multiple statements. enclosed in curly bracers. var is global/function scoped and let and const is block scoped
+
+Closure: Function bundled with its lexical environment is known as a closure. Whenever function is returned,
+  even if its vanished in execution context but still it remembers the reference it was pointing to. Even if the execution context from where a function is invoked
+  is removed from the call stack the invoked function still remembers its REFERENCE to the lexical scope.
+  use case:data hiding, module design pattern, currying, memoize, state in async, setTimeouts, cons: high memory ussage, closures arent garbase collected
+
+let, const is block scoped so in each iteration of a loop a new copy (with new memory location) of the variable is attached with the iteration block
+
+Function statement / Function Declaration: 
+  The function is normally defined and can be used later on
+Function expression: 
+  The function is first created and assigned to a variable so that it can be called by its variable name and unless it is defined, it cannot be executed otherwise it throws out "Uncaught TypeError"
+Anonymous function: 
+  Function where there is no need to define name for the function, it just can be assigned to variable
+Named function: 
+  Normal function with its name assigned to a variable !!In this case you cannot call function by its name in outer scope!! (Scope Chain)
+Firstclass function: Ability to use functions as values.
+
+
+//React
 react-dom(createRoot, createPortal) is for modifying the dom
 react elements are just objects. Becomes html elements when we render it
 order matters for multiple script tags
@@ -67,6 +128,28 @@ const ComponentWithLazyLoading = lazy(()=> import("path to the component"))
 
 higher order component: takes an component and returns an component
 
+redux:
+    dispatch an action to call a reducer function to add/change something in the redux store.
+    subscribe to the redux store using a selector to get data form redux store.
+    store a object to store states.
+reducer function still returns a new immutable state but does this behind the scene(using immerjs)
+
+<ScrollWheelRight>Function statement / Function Declaration : the function is normally defined and can be used later on␍
+Function expression : the function is first created and assigned to a variable so that it can be called by its variable name and unless it is defined, it cannot be executed otherwise it throws out "Uncaught TypeError"␍
+␍
+Anonymous function : function where there is no need to define name for the function, it just can be assigned to variable␍
+␍
+Named function : Normal function with its name assigned to a variable !!In this case you cannot call function by its name in outer scope!! (Scope Chain)Function statement / Function Declaration : the function is normally defined and can be used later on␍
+Function expression : the function is first created and assigned to a variable so that it can be called by its variable name and unless it is defined, it cannot be executed otherwise it throws out "Uncaught TypeError"␍
+␍
+Anonymous function : function where there is no need to define name for the function, it just can be assigned to variable␍
+␍
+Named function : Normal function with its name assigned to a variable !!In this case you cannot call function by its name in outer scope!! (Scope Chain)Function statement / Function Declaration : the function is normally defined and can be used later on
+Function expression : the function is first created and assigned to a variable so that it can be called by its variable name and unless it is defined, it cannot be executed otherwise it throws out "Uncaught TypeError"
+
+Anonymous function : function where there is no need to define name for the function, it just can be assigned to variable
+
+Named function : Normal function with its name assigned to a variable !!In this case you cannot call function by its name in outer scope!! (Scope Chain)
 
 
 //node.js
@@ -82,7 +165,11 @@ global object in node.js is global (provided by environment)
 global object in browser js is window. 
   this,self,window,frames refers to window object in browser
 
-globalThis is the standard for all js runtime environment to refer to the global object
+globalThis is the standard for all js runtime environment to refer to the global object.
+module protects their variables and functions from leaking.
+two types of module pattern:
+        1.CommonJs modules: by default used in Node.js, synchronous, non-strict mode.
+        2.Es modules(mjs) ESM: by default used in frameworks like react, asynchronous, strict mode. (newer)
 
 
 [CONFIG]
