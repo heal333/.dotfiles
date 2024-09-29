@@ -79,6 +79,11 @@ Named function:
 Firstclass function: Ability to use functions as values.
 
 
+call - invoke a function directly by passing in the reference which points to this variable inside the function
+apply - similar to call but arguments are passed as a list.
+bind - returns the method for later use instead of invoking it.
+these are also known as function borrowing
+
 
 
 
@@ -159,6 +164,35 @@ two types of module pattern:
         1.CommonJs modules: by default used in Node.js, synchronous, non-strict mode.
         2.Es modules(mjs) ESM: by default used in frameworks like react, asynchronous, strict mode. (newer)
 
+all code inside require function is executed inside a wraper IIFE. module is a passed as argument in this IIFE. require does caching
+(function(exports, require, module, __filename, __dirname) {
+   // Module code 
+});
+
+node.js has 2 mazor parts:
+        1.v8 JS engine: call stack,execution context,memory heap, garbage collector
+        2.libuv(multi-platform C library for asynchronous I/O):event loop, callback queue, thread pool
+
+event loop:
+      A loop that keeps checking the callstack and if the callstack is empty push functions from callback queue to the call stack.
+      phase:
+            1.timer:  setTimeouts and setIntervals are executed
+            2.poll: I/O callback, incoming connections,data,fs,crypto,http,get
+            3.check: setImmediate
+            4.close:socket.on("close")
+                loop to start.
+      before every phase(timer,poll......etc):
+                process.nextTick()(highest priority, runs recursively), pormise callbacks loop
+      when event loop has nothing to do it waits at the poll phase
+
+v8 engine steps: (jit)
+      A.parsing
+        1.lexical analysis(tokenization)
+        2.Syntax analysis(creating AST:a kind of tree representation of the abstract syntactic structure of source,relationship between tokens)
+      B.Interpreter
+        1.ignition Interpreter converts AST to Byte code.
+        2.turbofan compiler compiles some code to machine code too for optimization purpose.
+v8 engine also does garbage collection(orinoco,oil pan,scavenger) using mark and sweep algo.
 
 [CONFIG]
 currentMax = 5620000,5568000,5583000,5578000
