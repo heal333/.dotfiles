@@ -1,0 +1,41 @@
+configuration {
+       modes: [ combi ];
+       combi-modes: [ drun,window];
+       location:1;
+       //xoffset:1;
+       //yoffset:50;
+       cycle:false;
+       scroll-method:1;
+       show-icons: true;
+       steal-focus: true;
+
+
+       font: "JetBrainsMono Nerd Font Medium 14";
+
+       drun {
+       display-name: "";
+       }
+       combi{
+              display-name:"🔍";
+       }
+       run {
+       display-name: "";
+       }
+
+       window {
+       display-name: "";
+       }
+
+       timeout {
+              delay: 10;
+              action: "kb-cancel";
+       }
+      
+
+}
+
+
+
+@theme "cloudTheme.rasi"
+
+

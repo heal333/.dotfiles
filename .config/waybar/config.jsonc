@@ -11,16 +11,21 @@
       //"sway/mode",
       //"sway/scratchpad",
       //"custom/media",
-      //"hyprland/workspaces",
+      "custom/launcher",
+      "custom/separator",
+      "hyprland/workspaces",
+      "custom/separator",
       "hyprland/window"
       //"tray"
     ],
     "modules-center": [
-      "clock"
+      "clock",
+      "custom/media"
       //"sway/window"
     ],
     "modules-right": [
-      //"mpd",
+      "keyboard-state",
+      "custom/media",
       "idle_inhibitor",
       "bluetooth",
       //"tray",
@@ -31,7 +36,7 @@
     "memory",
     "temperature",
     "backlight",
-    //"keyboard-state",
+    "keyboard-state",
     //"sway/language",
     "battery"
     //"battery#bat2"
@@ -39,28 +44,43 @@
     "hyprland/window":{
       "max-length":25
     },
+
+    "custom/launcher": {
+      "format": " ",
+      "tooltip": false,
+      "on-click": "rofi -show drun"
+    },
+    "custom/separator": {
+      "format": "|",
+      "interval": "once",
+      "tooltip": false
+    },
+
     "hyprland/workspaces": {
       "format": "{name}",
       "format": "{icon}",
-      "tooltip": false,
       "all-outputs": true,
-      "max-length":10,
+      "active-only": false,
       "format-icons": {
-        "1":"1:  ", 
-        "2":"2:  ",
-        "3":"3:  ",
-        "4":"4: ",
-        "5":"5:  ",
-        "6":"6:  ",
-        "7":"7:  ",
-        "8":"8: "
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "default": "sd"
       },
       "persistent-workspaces": {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": []
+        "*": 5, // 5 workspaces by default on every monitor
+        "HDMI-A-1": 3 // but only three on HDMI-A-1
+      },
+      "window-rewrite": {
+        "title<.*mpv.*>": "", // Windows whose titles contain "youtube"
+        "Firefox": "", // Windows whose classes are "firefox"
+        "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+        "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+        "code": "󰨞"
       }
     },
     // Modules configuration
@@ -126,8 +146,8 @@
       "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "idle_inhibitor": {
-      "format": "",
-      "on-click":"hyprlock -q"
+      "format": "⏻",
+      "on-click":"wlogout"
       //"format-icons": {
       //"activated": "",
         //"deactivated": ""
@@ -146,7 +166,7 @@
     },
     "cpu": {
       "interval": 2,
-      "format": "{max_frequency}GHz  ",
+      "format": "{max_frequency}GHz ",
       "format-alt": "{max_frequency}GHz {min_frequency}GHz",
       "tooltip-format": "<tt>{max_frequency}GHz {min_frequency}GHz</tt>"
     },
@@ -173,8 +193,8 @@
         //"on-scroll-down": "bash ~/.config/waybar/scripts/setBrightness.sh ++"
         "smooth-scrolling-threshold":0,
         "scroll-step":5.0,
-        "on-scroll-down": "brightnessctl -n -q s +1%",
-        "on-scroll-up": "brightnessctl -n -q s 1%-"
+        "on-scroll-down": "brightnessctl set +1%",
+        "on-scroll-up": "brightnessctl -n set 1%-"
     },  
     "battery": {
       "states": {
@@ -182,7 +202,7 @@
             "warning": 30,
             "critical": 15
       },
-      "format": "{capacity}% {icon} ",
+      "format": "{capacity}% {icon}",
       "format-full": "{capacity}% {icon}",
       "format-charging": "{capacity}% ",
       "format-plugged": "{capacity}% ",
@@ -210,24 +230,25 @@
       "format": "{status}",
       "format-disconnected":" dc'ed",
       "on-click": "bash ~/.config/waybar/scripts/bluetoothToggle.sh",
-  //"on-click":"rfkill toggle bluetooth",
-  "on-click-right": "bluedevil-wizard",
-  "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-  "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+      "on-click-right": "bluedevil-wizard",
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
     },
     "network": {
       "interval":1,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format":"off",
+        "format-disabled":"deabled",
+        "format-alt":"{bandwidthDownBytes}↓ {bandwidthUpBytes}↑",
         "format-wifi": "{essid} ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr}   \n\n {bandwidthDownOctets} down   {bandwidthUpOctets} up \n {signalStrength}%   \n {frequency}GHz" ,
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "dc'ed ⚠",
-      //  "format-alt": "{ifname}: {ipaddr}/{cidr}",
-      "on-click":"bash ~/.config/waybar/scripts/setWifiToggle.sh"
+
+        "on-click-right":"bash ~/.config/waybar/scripts/setWifiToggle.sh"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

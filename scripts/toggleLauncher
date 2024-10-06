@@ -1,0 +1,6 @@
+if [ $(pidof rofi) ]; then
+    pkill rofi
+else
+    rofi -show
+fi
+

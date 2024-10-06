@@ -1,11 +1,23 @@
 #!/bin/bash
 
 cp -rf ~/.config/hypr ~/../void/projs/dotfiles/.config/
+cp -rf ~/.config/rofi ~/../void/projs/dotfiles/.config/
+cp -rf ~/.config/waybar ~/../void/projs/dotfiles/.config/
+cp -rf ~/.config/mako ~/../void/projs/dotfiles/.config/
+cp -rf ~/.config/nvim ~/../void/projs/dotfiles/.config/
+cp -rf ~/.config/kitty ~/../void/projs/dotfiles/.config/
+cp -rf ~/.config/cava ~/../void/projs/dotfiles/.config/
+
+
+
+
+
+
 cp -rf ~/scripts/* ~/../void/projs/dotfiles/scripts/
 rm ~/../void/projs/dotfiles/scripts/blueConnect
 
 cd ~/../void/projs/dotfiles/
 git add -A
-git commit -m "scripetd push"
+git commit -m "$1"
 git push
 
