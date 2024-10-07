@@ -44,7 +44,7 @@ prompt {
 }
 
 listview {
-  lines: 7;
+  lines: 10;
 }
 
 element {
@@ -53,7 +53,7 @@ element {
 }
 
 element-icon {
-  padding: 10px 10px;
+  padding: 5px 15px;
   size: 35px;
 }
 
@@ -62,6 +62,6 @@ element-text {
   text-color: inherit;
 }
 element-text selected, element-icon selected {
-  text-color: @blue;
+  text-color: white;
   background-color:@purple;
 }

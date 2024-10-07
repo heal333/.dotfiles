@@ -10,7 +10,7 @@ configuration {
        steal-focus: true;
 
 
-       font: "JetBrainsMono Nerd Font Medium 14";
+       font: "monospace 11";
 
        drun {
        display-name: "";
