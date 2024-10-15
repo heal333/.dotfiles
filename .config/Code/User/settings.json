@@ -1,7 +1,7 @@
 {
     // "workbench.colorTheme": "Pitch Black",
     "window.menuBarVisibility": "toggle",
-    "editor.fontSize": 12,
+    "editor.fontSize": 14,
     "editor.scrollbar.vertical": "hidden",
     "editor.scrollbar.verticalScrollbarSize": 0,
     "security.workspace.trust.untrustedFiles": "newWindow",
@@ -10,7 +10,6 @@
     "editor.minimap.side": "left",
     "editor.fontFamily": "'Maple Mono', 'monospace', monospace",
     "extensions.autoUpdate": false,
-    "workbench.statusBar.visible": false,
     "terminal.external.linuxExec": "kitty",
     "terminal.explorerKind": "both",
     "terminal.sourceControlRepositoriesKind": "both",
@@ -23,6 +22,7 @@
         "editorWidget.background": "#000000cc",
         "focusBorder": "#00ffdb",
         "activityBar.foreground": "#00ffdb",
+        "activityBar.activeBorder": "#00000000",
         "activityBar.background": "#000000",
         "activityBarBadge.foreground": "#000000",
         "activityBarBadge.background": "#00ffdb",
@@ -33,6 +33,14 @@
         "editorGroupHeader.tabsBorder": "#000000",
         "tab.activeBorder": "#000000",
         "tab.hoverBorder": "#00ffdb",
-        "tab.activeBorderTop": "#00ffdb",
+        "tab.activeBorderTop": "#000000",
+        "editor.lineHighlightBorder": "#00000000",
+        "statusBar.background": "#000000",
+        "statusBarItem.remoteBackground": "#00ffdb",
+        "statusBarItem.remoteForeground": "#000000"
     },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 4,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }

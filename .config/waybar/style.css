@@ -86,26 +86,22 @@ background-color: #FFFFFF;
   #network,
   #pulseaudio,
   #wireplumber,
-  #custom-media,
-  #tray,
-  #mode,
-  #idle_inhibitor,
-  #scratchpad,
-  #power-profiles-daemon,
-  #mpd {
+  #custom-powerButton {
     font-weight: 800;
-    margin:3px;
+    margin:2px;
     background-color: rgba(255,255,255,.15);
-    padding: 2px 11px;
+    padding: 3px 9px;
     color: #cccccc;
   }
 
-  #idle_inhibitor {
-    background-color: rgb(200,0,0);
-    font-weight: bold;
-    padding-right: 17px;
-    font-size:1.2rem;
+  #custom-powerButton {
+    background-color: rgb(175,0,0);
+    font-size:1.3rem;
     color: #dddddd;
+    padding: 4px 4px;
+  }
+  #custom-powerButton:hover{
+    background-color: rgb(255,0,0);
   }
   #network{
     min-width:110px;
@@ -165,18 +161,13 @@ background-color: #FFFFFF;
     animation-direction: alternate;
   }
 
-
-
-
   label:focus {
     background-color: #000000;
   }
 
-
   #cpu {
     min-width:90px;
   }
-
 
   #pulseaudio.muted {
     background-color: #90b1b1;
@@ -192,78 +183,14 @@ background-color: #FFFFFF;
     background-color: #f53c3c;
   }
 
-  #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-  }
-
-  #custom-media.custom-spotify {
-    background-color: #66cc99;
-  }
-
-  #custom-media.custom-vlc {
-    background-color: #ffa000;
-  }
-
   #temperature {
     min-width:50px;
   }
-
-
 
   #temperature.critical {
     background-color: #eb4d4b;
   }
 
-  #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-  }
-
-  #mpd.disconnected {
-    background-color: #f53c3c;
-  }
-
-  #mpd.stopped {
-    background-color: #90b1b1;
-  }
-
-  #mpd.paused {
-    background-color: #51a37a;
-  }
-
-  #language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-  }
-
-  #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-  }
-
-  #keyboard-state > label {
-    padding: 0 5px;
-  }
-
-  #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  #scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  #scratchpad.empty {
-    background-color: transparent;
-  }
 
   #privacy {
     padding: 0;

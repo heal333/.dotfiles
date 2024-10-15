@@ -195,7 +195,7 @@ v8 engine steps: (jit)
 v8 engine also does garbage collection(orinoco,oil pan,scavenger) using mark and sweep algo.
 
 [CONFIG]
-currentMax = 5620000,5568000,5583000,5578000
+currentMax = 5620000,5568000,5583000,5578000,5555000
 
 
 [MATH]
