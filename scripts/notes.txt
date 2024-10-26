@@ -7,6 +7,10 @@ unary(1) binary(2) decimal(10) bi(nary digi)t
 1 0 0:4
 0 1 0:2
 
+10**8 js
+learn about indexing (in-depth)
+codesplitting
+
 High level language -- (Machine code -- Assembly code)* -- Binary code.
                         * low level language
 
@@ -82,7 +86,7 @@ Firstclass function: Ability to use functions as values.
 call - invoke a function directly by passing in the reference which points to this variable inside the function
 apply - similar to call but arguments are passed as a list.
 bind - returns the method for later use instead of invoking it.
-these are also known as function borrowing
+these are also known as function borrowing.
 
 
 

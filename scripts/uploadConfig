@@ -7,6 +7,7 @@ cp -rf ~/.config/mako ~/../void/projs/dotfiles/.config/
 cp -rf ~/.config/nvim ~/../void/projs/dotfiles/.config/
 cp -rf ~/.config/kitty ~/../void/projs/dotfiles/.config/
 cp -rf ~/.config/cava ~/../void/projs/dotfiles/.config/
+cp -rf ~/.config/neofetch ~/../void/projs/dotfiles/.config/
 cp -rf ~/.config/Code/User/settings.json ~/../void/projs/dotfiles/.config/Code/User/
 
 
