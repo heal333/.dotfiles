@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "@define-color bg $1;" > ~/.config/waybar/temp.css
+
+if [ -n "$2" ]; then
+   echo "dosen matta"
+   #echo "@define-color bg $1;" > ~/.config/waybar/temp.css
+elif [ -n "$1" ]; then
+   echo "@define-color bg $1;" > ~/.config/waybar/temp.css
+else
+   echo "@define-color bg #ffffff;" > ~/.config/waybar/temp.css
+fi

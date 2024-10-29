@@ -20,6 +20,11 @@ rm ~/../void/projs/dotfiles/scripts/blueConnect
 
 cd ~/../void/projs/dotfiles/
 git add -A
-git commit -m "$1"
+if [ -n "$1" ]; then
+  git commit -m "$1"
+else
+  git commit -m "scripted push"
+fi
+
 git push
 
